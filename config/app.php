@@ -177,6 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         \App\Providers\UserServiceProvider::class, // Custom service provider for UserService
+        \App\Providers\TodolistServiceProvider::class,
     ],
 
     /*
