@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Services\TodolistService;
+use App\Services\Impl\TodolistServiceimpl;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // Binding interface ke implementasinya
+        $this->app->bind(TodolistService::class, TodolistServiceImpl::class);
     }
 
     /**
