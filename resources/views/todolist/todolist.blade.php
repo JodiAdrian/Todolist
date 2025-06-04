@@ -19,12 +19,11 @@
         </div>
     @endif
 
-    <div class="row">
-        <form method="post" action="/logout">
-            @csrf
-            <button class="w-15 btn btn-lg btn-danger" type="submit">Sign Out</button>
-        </form>
-    </div>
+        <div class="row mb-3">
+            <div class="col-auto">
+                <a href="/logout" class="btn btn-danger">Sign Out</a>
+            </div>
+        </div>
 
     <div class="row align-items-center g-lg-5 py-5">
         <div class="col-lg-7 text-center text-lg-start">
