@@ -26,7 +26,8 @@ class TodolistServiceimpl implements TodolistService
 
      public function removeTodo(string $todoId)
      {
-         $todolist = Session::exists("todolist");
+         // Ambil data todolist dari session, atau [] jika tidak ada
+         $todolist = Session::get("todolist");
 
          foreach ($todolist as $index => $value) {
              if ($value["id"] == $todoId) {
@@ -35,6 +36,7 @@ class TodolistServiceimpl implements TodolistService
              }
          }
 
+         // Simpan ulang todolist yang sudah dihapus
          Session::put("todolist", $todolist);
      }
 }
